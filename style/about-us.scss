@@ -1,0 +1,114 @@
+
+$about-height: 100vh;
+$about-max-height: 624px;
+$text-white: #ffffff;
+
+.about-section {
+    position: relative;
+    width: 100%;
+    max-height: $about-max-height;
+    height: $about-height;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .about-container {
+        position: absolute;
+        inset: 0;
+        z-index: -2;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    .about_overlay {
+        position: absolute;
+        inset: 0;
+        background-color: rgba(3, 26, 101, 0.6); 
+        mix-blend-mode: hard-light; 
+        z-index: -1;
+    }
+
+    .about_us_text {
+        color: $text-white;
+        padding: 0 20px;
+        z-index: 1;
+        width: 100%;
+        height: 100%; 
+        position: relative; 
+        display: flex;
+        flex-direction: column; 
+        justify-content: center;
+        align-items: center;    
+
+        .us_text {
+            text-align: center;
+            h1 {
+                font-family: var(--second-family);
+                font-weight: 700;
+                font-size: clamp(80px, 12vw, 180px); 
+                line-height: 111%;
+                color: var(--white);
+                margin-bottom: 32px;
+                text-transform: uppercase;
+            }
+        }
+
+        .us_info_text {
+            position: absolute; 
+            right: 40px;     
+            bottom: 60px;    
+            text-align: start;
+
+            p {
+                font-family: var(--font-family);
+                font-weight: 400;
+                font-size: 24px;
+                line-height: 133%;
+                color: var(--white);
+                max-width: 821px; 
+                margin: 0;        
+            }
+        }
+
+        
+        @media (max-width: 720px) {
+            align-items: stretch; 
+            padding: 0 20px;
+
+            .us_text {
+                align-self: flex-start; 
+                text-align: left;
+                h1 {
+                    font-size: 80px;
+                    margin-bottom: 10px;
+                }
+            }
+
+            .us_info_text {
+                position: static;     
+                align-self: flex-end;  
+                text-align: start;    
+                margin-top: 20px; 
+                max-width: 80%;         
+
+                p {
+                    font-size: 14px;   
+                    line-height: 1.4;
+                }
+            }
+        }
+
+        
+        @media (max-width: 850px) and (min-width: 640px) {
+            .us_info_text {
+                right: 20px;
+                bottom: 30px;
+                p { max-width: 500px; font-size: 18px; }
+            }
+        }
+    }
+}
