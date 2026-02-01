@@ -231,7 +231,7 @@
                     flex: 0 1 calc(33.333% - 40px); 
 
                     h3 {
-                        font-family: var(--second-family);
+                        font-family: var(--font-family);
                         font-size: 48px;
                         color: var(--white);
                         @media(max-width: 485px) {font-size: 32px;}

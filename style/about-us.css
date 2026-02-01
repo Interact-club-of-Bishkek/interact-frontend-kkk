@@ -7,6 +7,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-bottom: 100px;
 }
 .about-section .about-container {
   position: absolute;
@@ -48,7 +49,6 @@
   line-height: 111%;
   color: var(--white);
   margin-bottom: 32px;
-  text-transform: uppercase;
 }
 .about-section .about_us_text .us_info_text {
   position: absolute;
@@ -98,5 +98,90 @@
   .about-section .about_us_text .us_info_text p {
     max-width: 500px;
     font-size: 18px;
+  }
+}
+
+.service-section {
+  max-width: 1362px;
+  width: 92%;
+  margin: 40px auto;
+  border-radius: 24px;
+  padding: clamp(24px, 5vw, 64px);
+  min-height: 400px;
+  background: var(--almost-white);
+  color: var(--black);
+  display: flex;
+  align-items: center;
+}
+.service-section .service {
+  width: 100%;
+}
+.service-section .service .service_num {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+}
+.service-section .service .service_num .service_data {
+  flex: 1;
+  max-width: 593px;
+}
+.service-section .service .service_num .service_data h2 {
+  font-family: var(--second-family);
+  font-weight: 700;
+  font-size: 80px;
+  line-height: 95%;
+  color: var(--black);
+  margin-bottom: 20px;
+}
+@media (max-width: 780px) {
+  .service-section .service .service_num .service_data h2 {
+    font-size: 53px;
+    line-height: 117%;
+  }
+}
+.service-section .service .service_num .service_data p {
+  font-family: var(--font-family);
+  font-style: italic;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 133%;
+  color: var(--dark-grey);
+}
+.service-section .service .service_num .service_wrap {
+  flex: 1;
+  max-width: 577px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.service-section .service .service_num .service_wrap .service_link p {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 133%;
+  color: var(--black);
+}
+@media (max-width: 780px) {
+  .service-section .service .service_num .service_wrap .service_link p {
+    font-size: 16px;
+    line-height: 150%;
+  }
+}
+@media (max-width: 992px) {
+  .service-section {
+    border-radius: 16px;
+  }
+  .service-section .service .service_num {
+    flex-direction: column;
+    gap: 32px;
+  }
+  .service-section .service .service_num .service_data, .service-section .service .service_num .service_wrap {
+    max-width: 100%;
+    width: 100%;
+  }
+  .service-section .service .service_num .service_data h2 {
+    margin-bottom: 12px;
   }
 }/*# sourceMappingURL=about-us.css.map */
